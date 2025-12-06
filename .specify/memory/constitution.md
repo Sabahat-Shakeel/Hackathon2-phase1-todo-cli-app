@@ -1,55 +1,69 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 → 1.0.0
+- Modified principles:
+  - PRINCIPLE_1: Simplicity
+  - PRINCIPLE_2: Reliability
+  - PRINCIPLE_3: Reproducibility
+  - PRINCIPLE_4: Observability
+  - PRINCIPLE_5: Minimalism
+- Added sections:
+  - Key Standards
+  - Constraints
+  - Success Criteria
+- Removed sections:
+  - None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ✅ .specify/templates/spec-template.md
+  - ✅ .specify/templates/tasks-template.md
+- Follow-up TODOs:
+  - TODO(RATIFICATION_DATE): ask user for date
+-->
+# In-Memory TODO Python Console App with Rich CLI Enhancements
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity
+Code should be easy to read, maintain, and understand.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Reliability
+All CRUD operations must function correctly and handle invalid input gracefully.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reproducibility
+Same input always produces the same output; no random behavior.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Observability
+User receives clear, styled console messages for each action.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Minimalism
+Prefer standard Python libraries, with Rich added for enhanced CLI visuals.
 
-### [PRINCIPLE_6_NAME]
+## Key Standards
 
+- **Code structure**: Functions follow the single responsibility principle.
+- **Input validation**: All user inputs checked before processing.
+- **Task representation**: Each task includes description, created_at, updated_at.
+- **User interface**: Terminal/CLI with intuitive commands, help text, tables, and colored output using Rich.
+- **Testing**: Basic unit tests covering all operations (task add, list task, update task , delete, exit).
+- **Mark**: Mark as Complete – Toggle task completion status
+- **Styling**: Use Rich for tables, colored messages, and improved readability.
 
-[PRINCIPLE__DESCRIPTION]
+## Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- **Data storage**: In-memory only; no external database.
+- **Execution environment**: Python 3.10+.
+- **Single-file implementation preferred for easy execution.**
+- **Optional dependency**: Rich library for CLI styling (install via pip).
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Success criteria
+- User can successfully add, list, update, delete, and clear tasks.
+- Task list displayed in a readable Rich table with colored status.
+- Application handles invalid inputs without crashing.
+- Unit tests pass successfully.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution guides the project's development. Amendments require team consensus and documentation.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): ask user for date | **Last Amended**: 2025-12-06
